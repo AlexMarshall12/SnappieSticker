@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE8143CCBE98C094D5B7F2C39B01DBEBD7834E21",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97" : 0,
+    "CE8143CCBE98C094D5B7F2C39B01DBEBD7834E21" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6B3A4ACD-9B9A-4144-9EE6-6F67BA87EB8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97" : "AVCamSwift",
+    "CE8143CCBE98C094D5B7F2C39B01DBEBD7834E21" : "AVCamSwift-master\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AVCamSwift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AVCamSwift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alex-chan\/AVCamSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C0AF08A221A2DF89935E4FB50A773A6E9AE6C97"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/alex_marshall\/snappie-official.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE8143CCBE98C094D5B7F2C39B01DBEBD7834E21"
+    }
+  ]
+}

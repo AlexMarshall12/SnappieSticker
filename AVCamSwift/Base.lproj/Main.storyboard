@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Cam View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" userLabel="Cam View Controller" customClass="ViewController" customModule="AVCamSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LCU-Bq-hhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Myx-V2-VGl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJ7-Jq-dVS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nN-lk-uog" customClass="AVCamPreviewView" customModule="AVCamSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-hW-Pdr" userLabel="Captured Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-62-uOq">
+                                        <rect key="frame" x="216" y="0.0" width="168" height="168"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="MHe-wU-Rdn" appends="YES" id="rUh-PR-rOK"/>
+                                            <outletCollection property="gestureRecognizers" destination="mud-Bq-tkX" appends="YES" id="BpC-JK-lj9"/>
+                                            <outletCollection property="gestureRecognizers" destination="Nr8-qw-hAW" appends="YES" id="Pvl-Z2-IN8"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GLj-hW-Pdr" firstAttribute="height" secondItem="5nN-lk-uog" secondAttribute="height" id="HWo-oE-P9u"/>
+                                    <constraint firstItem="GLj-hW-Pdr" firstAttribute="centerX" secondItem="5nN-lk-uog" secondAttribute="centerX" id="L4F-Tz-ky1"/>
+                                    <constraint firstItem="GLj-hW-Pdr" firstAttribute="centerY" secondItem="5nN-lk-uog" secondAttribute="centerY" id="n58-TD-UeS"/>
+                                    <constraint firstItem="MkY-62-uOq" firstAttribute="top" secondItem="GLj-hW-Pdr" secondAttribute="top" id="qeB-ze-0Np"/>
+                                    <constraint firstItem="GLj-hW-Pdr" firstAttribute="width" secondItem="5nN-lk-uog" secondAttribute="width" id="sPY-4T-How"/>
+                                    <constraint firstItem="MkY-62-uOq" firstAttribute="centerX" secondItem="GLj-hW-Pdr" secondAttribute="centerX" id="zXk-jW-dNF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IUu-HK-WYM" appends="YES" id="7UD-by-v89"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj1-9G-vwL">
+                                <rect key="frame" x="245" y="490" width="110" height="110"/>
+                                <state key="normal" image="Snap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="snapStillImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="osp-gP-i9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqY-ng-ZlF" userLabel="Share Button">
+                                <rect key="frame" x="530" y="522" width="70" height="78"/>
+                                <state key="normal" image="Share"/>
+                                <connections>
+                                    <action selector="shareTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yZ8-gJ-6Sz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Lm-pY6">
+                                <rect key="frame" x="525" y="0.0" width="75" height="60"/>
+                                <state key="normal" image="Flip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WsJ-Qv-rwF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meX-Fp-zCX">
+                                <rect key="frame" x="221" y="370" width="64" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleMovieRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n2u-DA-s2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clS-gq-haD">
+                                <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                                <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="retryTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="x71-AE-XMK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s99-xI-c0m" userLabel="Download Button">
+                                <rect key="frame" x="0.0" y="514" width="67" height="86"/>
+                                <state key="normal" image="Download"/>
+                                <connections>
+                                    <action selector="downloadTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yth-eY-8xp"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZEx-0Y-pjJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZEx-0Y-pjJ" firstAttribute="centerX" secondItem="GLj-hW-Pdr" secondAttribute="centerX" id="7nx-n0-KhE" userLabel="Gray Activity Indicator.centerX = PreviewView.centerX"/>
+                            <constraint firstItem="s99-xI-c0m" firstAttribute="bottom" secondItem="5nN-lk-uog" secondAttribute="bottom" id="BXX-Pu-eGG"/>
+                            <constraint firstItem="ZEx-0Y-pjJ" firstAttribute="centerY" secondItem="GLj-hW-Pdr" secondAttribute="centerY" id="CLT-A1-k7Y" userLabel="Gray Activity Indicator.centerY = PreviewView.centerY"/>
+                            <constraint firstItem="02i-Lm-pY6" firstAttribute="trailing" secondItem="5nN-lk-uog" secondAttribute="trailing" id="DMX-58-1X3"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="top" secondItem="cJ7-Jq-dVS" secondAttribute="top" id="DfC-iG-DOR"/>
+                            <constraint firstItem="clS-gq-haD" firstAttribute="leading" secondItem="5nN-lk-uog" secondAttribute="leading" id="HPP-bG-1EM"/>
+                            <constraint firstAttribute="trailing" secondItem="5nN-lk-uog" secondAttribute="trailing" id="Jbb-59-5iQ"/>
+                            <constraint firstItem="gj1-9G-vwL" firstAttribute="centerX" secondItem="5nN-lk-uog" secondAttribute="centerX" id="KcY-pC-RtW"/>
+                            <constraint firstItem="s99-xI-c0m" firstAttribute="leading" secondItem="5nN-lk-uog" secondAttribute="leading" id="P1n-dp-HA5"/>
+                            <constraint firstItem="clS-gq-haD" firstAttribute="top" secondItem="5nN-lk-uog" secondAttribute="top" id="PKZ-GS-w8G"/>
+                            <constraint firstItem="02i-Lm-pY6" firstAttribute="top" secondItem="5nN-lk-uog" secondAttribute="top" id="b53-Xf-NRi"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="leading" secondItem="cJ7-Jq-dVS" secondAttribute="leading" id="eB7-8N-NVW"/>
+                            <constraint firstItem="gj1-9G-vwL" firstAttribute="bottom" secondItem="5nN-lk-uog" secondAttribute="bottom" id="l1a-00-FEN"/>
+                            <constraint firstItem="xqY-ng-ZlF" firstAttribute="trailing" secondItem="5nN-lk-uog" secondAttribute="trailing" id="qKY-9l-Tpn"/>
+                            <constraint firstItem="xqY-ng-ZlF" firstAttribute="bottom" secondItem="5nN-lk-uog" secondAttribute="bottom" id="r0X-oJ-azz"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="bottom" secondItem="Myx-V2-VGl" secondAttribute="top" id="rI1-w4-ufP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityViewIndicator" destination="ZEx-0Y-pjJ" id="8J3-1C-AlS"/>
+                        <outlet property="cameraButton" destination="02i-Lm-pY6" id="e4r-oT-VRd"/>
+                        <outlet property="capturedImageView" destination="GLj-hW-Pdr" id="FaE-Ot-SlC"/>
+                        <outlet property="downloadButton" destination="s99-xI-c0m" id="y4r-JK-ckF"/>
+                        <outlet property="previewView" destination="5nN-lk-uog" id="bNB-jw-EGF"/>
+                        <outlet property="recordButton" destination="meX-Fp-zCX" id="jat-5T-S61"/>
+                        <outlet property="retryButton" destination="clS-gq-haD" id="PO1-Mh-AW4"/>
+                        <outlet property="shareButton" destination="xqY-ng-ZlF" id="JgR-CS-Oaj"/>
+                        <outlet property="snapButton" destination="gj1-9G-vwL" id="67d-Ml-x4U"/>
+                        <outlet property="stickerImage" destination="MkY-62-uOq" id="kim-Ia-Jey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IUu-HK-WYM">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="vXZ-lx-hvc" id="Yos-QI-xsw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MHe-wU-Rdn">
+                    <connections>
+                        <action selector="handlePan:" destination="vXZ-lx-hvc" id="ekE-8n-25G"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="Uag-en-km5"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="mud-Bq-tkX">
+                    <connections>
+                        <action selector="handlePinch:" destination="vXZ-lx-hvc" id="DRh-mM-hpj"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="qwK-zt-QVn"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Nr8-qw-hAW">
+                    <connections>
+                        <action selector="handleRotate:" destination="vXZ-lx-hvc" id="pVf-NJ-kjd"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="fLB-7X-unH"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="201" y="250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Close" width="57" height="57"/>
+        <image name="Download" width="67" height="86"/>
+        <image name="Flip" width="75" height="60"/>
+        <image name="Share" width="70" height="78"/>
+        <image name="Snap" width="110" height="110"/>
+        <image name="monkey" width="168" height="168"/>
+    </resources>
+</document>
